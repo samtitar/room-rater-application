@@ -32,8 +32,23 @@ html, body {
     transform: translate(-50%, -50%);
 }
 
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+}
+
+.footer a {
+    color: #1b1b1b;
+    text-decoration: none;
+}
+
 #results {
-    top: 30%;
+    top: 20%;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -70,9 +85,9 @@ html, body {
 }
 
 #results .rating-border {
-    margin-left: 10%;
-    width: 80%;
-    height: 3em;
+    margin-left: 15%;
+    width: 70%;
+    height: 1em;
     background: linear-gradient(10deg, rgba(65, 0, 179, 1) 0%, rgba(9, 0, 26, 1) 100%);
     border-radius: 1.5em;
 
@@ -103,9 +118,9 @@ html, body {
 }
 
 #back {
-    position: absolute;
+    position: fixed;
+    bottom: 2em;
     width: 8em;
-    top: 60%;
     left: calc(50% - 4em);
     border-radius: 5em;
     text-align: center;
@@ -117,7 +132,7 @@ html, body {
     animation-duration: 3s;
     animation-fill-mode: both;
     animation-name: fadeInUp;
-    box-shadow: 0px 0px 100px 1px #121212;
+    box-shadow: 0px 10px 100px 1px #121212;
 }
 
 #back p {
@@ -125,4 +140,23 @@ html, body {
     background: linear-gradient(120deg, rgba(153,95,255,1) 0%, rgba(81,150,255,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (min-width: 992px) {
+    #results {
+        top: 10%
+    }
+
+    #results .rating-border {
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    #comment {
+        font-size: 2em;
+    }
+
+    #back {
+        font-size: 2.5em;
+    }
 }

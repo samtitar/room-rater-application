@@ -1,0 +1,128 @@
+html, body {
+    margin: 0;
+}
+
+.page-container {
+    background: linear-gradient(120deg, rgba(153,95,255,1) 0%, rgba(81,150,255,1) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+.start-button {
+    background: white;
+    position: absolute;
+    width: 30em;
+    height: 30em;
+    top: calc(50% - 15em);
+    left: calc(50% - 15em);
+    border-radius: 15em;
+    box-shadow: 0px 0px 100px 1px #121212;
+}
+
+.start-button p {
+    background: linear-gradient(120deg, rgba(153,95,255,1) 0%, rgba(81,150,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5em;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#results {
+    top: 30%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#results .rating-text {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+}
+
+#results .rating-text .score {
+    font-size: 18em;
+}
+
+#results .rating-text .scale {
+    font-size: 4em;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+#results .rating-border {
+    margin-left: 10%;
+    width: 80%;
+    height: 3em;
+    background: linear-gradient(10deg, rgba(65, 0, 179, 1) 0%, rgba(9, 0, 26, 1) 100%);
+    border-radius: 1.5em;
+
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+}
+
+#results .rating-fill {
+    background: white;
+    border-radius: 1.5em;
+    height: 100%;
+    width: 0;
+}
+
+#comment {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4em;
+
+    opacity: 0;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+}
+
+#back {
+    position: absolute;
+    width: 8em;
+    top: 60%;
+    left: calc(50% - 4em);
+    border-radius: 5em;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 5em;
+    background-color: white;
+
+    opacity: 0;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+    box-shadow: 0px 0px 100px 1px #121212;
+}
+
+#back p {
+    margin: .3em 0;
+    background: linear-gradient(120deg, rgba(153,95,255,1) 0%, rgba(81,150,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

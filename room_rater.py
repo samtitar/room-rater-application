@@ -41,6 +41,9 @@ def predict():
     img_bytes = file.read()
     return jsonify({ 'rating': get_prediction(img_bytes) })
 
+@app.route('/about', methods=['GET'])
+def about():
+    return render_template('about.html')
 
 if __name__ == '__main__':
     model_state = torch.load('model.tar')
